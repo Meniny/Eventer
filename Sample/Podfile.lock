@@ -1,0 +1,16 @@
+PODS:
+  - Eventer (1.0.0)
+
+DEPENDENCIES:
+  - Eventer (from `../`)
+
+EXTERNAL SOURCES:
+  Eventer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Eventer: f6a968cea321a00f3a21a80099ed89ed86253978
+
+PODFILE CHECKSUM: 394b91a9c5ff3119bb32be42b29e90a23985eef5
+
+COCOAPODS: 1.4.0
