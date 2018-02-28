@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name        = 'Eventer'
   s.module_name = 'Eventer'
-  s.version     = '1.0.0'
+  s.version     = '1.1.0'
   s.summary     = 'Event bus for iOS.'
 
   s.homepage    = 'https://github.com/Meniny/Eventer'
