@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Eventer.unregister(self)
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         Eventer.onMainThread(self, name: EventName.didLoad.rawValue) { (_) in
             print(EventName.didLoad.rawValue)

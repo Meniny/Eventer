@@ -83,12 +83,12 @@
             notificationName = name
         }
         
-        public static let willShow = KeyboardEvent.init(name: .UIKeyboardWillShow)
-        public static let didShow = KeyboardEvent.init(name: .UIKeyboardDidShow)
-        public static let willHide = KeyboardEvent.init(name: .UIKeyboardWillHide)
-        public static let didHide = KeyboardEvent.init(name: .UIKeyboardDidHide)
-        public static let willChangeFrame = KeyboardEvent.init(name: .UIKeyboardWillChangeFrame)
-        public static let didChangeFrame = KeyboardEvent.init(name: .UIKeyboardDidChangeFrame)
+        public static let willShow = KeyboardEvent.init(name: UIResponder.keyboardWillShowNotification)
+        public static let didShow = KeyboardEvent.init(name: UIResponder.keyboardDidShowNotification)
+        public static let willHide = KeyboardEvent.init(name: UIResponder.keyboardWillHideNotification)
+        public static let didHide = KeyboardEvent.init(name: UIResponder.keyboardDidHideNotification)
+        public static let willChangeFrame = KeyboardEvent.init(name: UIResponder.keyboardWillChangeFrameNotification)
+        public static let didChangeFrame = KeyboardEvent.init(name: UIResponder.keyboardDidChangeFrameNotification)
     }
     
     public func observingKeyboard(event: KeyboardEvent, target: AnyObject, callback: @escaping KeyboardEventClosure) {
@@ -98,10 +98,10 @@
                 callback(notification, 0, 0, CGRect.zero, CGRect.zero)
                 return
             }
-            let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? Double
-            let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? Double
-            let keyboardFrameBegin = userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect
-            let keyboardFrameEnd = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
+            let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
+            let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double
+            let keyboardFrameBegin = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? CGRect
+            let keyboardFrameEnd = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
             
             callback(notification, duration ?? 0, curve ?? 0, keyboardFrameBegin ?? .zero, keyboardFrameEnd ?? .zero)
         })

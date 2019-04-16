@@ -1,16 +1,16 @@
 PODS:
-  - Eventer (1.1.0)
+  - Eventer (1.2.0)
 
 DEPENDENCIES:
   - Eventer (from `../`)
 
 EXTERNAL SOURCES:
   Eventer:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Eventer: c18842d301858e38f2f99141714c66daf6d5ede4
+  Eventer: aba1a8e0a721ca1dc929ffbacccbd37d3f4746bd
 
 PODFILE CHECKSUM: 394b91a9c5ff3119bb32be42b29e90a23985eef5
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.7.0.beta.3
