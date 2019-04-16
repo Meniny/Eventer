@@ -23,7 +23,7 @@
 ## 📋 Requirements
 
 - iOS 8.0+
-- Xcode 9.0+ with Swift 4.0+
+- Xcode 9.0+ with Swift 5.0+
 
 ## 📲 Installation
 
